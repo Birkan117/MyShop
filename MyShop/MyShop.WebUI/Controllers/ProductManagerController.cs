@@ -31,7 +31,7 @@ namespace MyShop.WebUI.Controllers
         public ActionResult Create()
         {
             ProductManagerViewModel viewModel = new ProductManagerViewModel();
-
+            //merges both models into one viewmodel which can be used to pass data around
             viewModel.Product = new Product();
             viewModel.ProductCategories = productCategories.Collection();
 
