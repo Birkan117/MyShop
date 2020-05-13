@@ -41,15 +41,18 @@ namespace MyShop.WebUI.Controllers
         [HttpPost]
         public ActionResult Create(Product product)
         {
+            //Checks to make sure any validation you have set is met. if not it will return the error
             if (!ModelState.IsValid)
             {
                 return View(product);
             }
             else
             {
+                //This inserts the product into the collection.
                 context.Insert(product);
+                //This then saves the information into the database.
                 context.Commit();
-
+                //Sends the users back to the Index Page
                 return RedirectToAction("Index");
             }
         }
@@ -70,6 +73,7 @@ namespace MyShop.WebUI.Controllers
                 return View(viewModel);
             }
         }
+
         [HttpPost]
         public ActionResult Edit(Product product, string Id)
         {

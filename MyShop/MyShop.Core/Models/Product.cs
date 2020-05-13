@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyShop.Core.Models
 {
-    public class Product : BaseEntity
+    public class Product : BaseEntity 
     {
         [StringLength(20)]
         [DisplayName("Product Name")]
