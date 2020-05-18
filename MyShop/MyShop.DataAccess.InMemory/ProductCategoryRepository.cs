@@ -35,6 +35,7 @@ namespace MyShop.DataAccess.InMemory
 
         public void Update(ProductCategory productCategory)
         {
+            //This finds the product that you want to edit. It finds it from the ID
             ProductCategory productCategoryToUpdate = productCategories.Find(p => p.Id == productCategory.Id);
 
             if (productCategoryToUpdate != null)

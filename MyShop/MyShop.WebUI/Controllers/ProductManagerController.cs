@@ -12,6 +12,7 @@ namespace MyShop.WebUI.Controllers
     public class ProductManagerController : Controller
     {
         ProductRepository context;
+        //This is we can load our product categories from the database
         ProductCategoryRepository productCategories;
         //Constructor bellow.
         public ProductManagerController()
