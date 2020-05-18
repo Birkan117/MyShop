@@ -15,6 +15,7 @@ namespace MyShop.DataAccess.InMemory
 
         public ProductCategoryRepository()
         {
+            //This is creating a list in the cache for productCategories
             productCategories = cache["productCategories"] as List<ProductCategory>;
             if (productCategories == null)
             {
