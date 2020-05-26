@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 
 namespace MyShop.DataAccess.InMemory
 {
-    //<T> is a placeholder
+    //<T> is a placeholder, Used to make the class generic.
+    // : BaseEntity is being enhirted.
     public class InMemoryRepository<T> : IRepository<T> where T : BaseEntity
     {
         ObjectCache cache = MemoryCache.Default;
         List<T> items;
+        //when we are creating caches, we are creating different ones. So this will allow us to specify the different ones.
         string className;
 
         public InMemoryRepository()
@@ -29,10 +31,10 @@ namespace MyShop.DataAccess.InMemory
 
         public void Commit()
         {
+            //Stores our item into memory
             cache[className] = items;
 
         }
-
 
         public void Insert(T t)
         {

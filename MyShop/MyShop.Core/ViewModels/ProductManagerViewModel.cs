@@ -10,7 +10,7 @@ namespace MyShop.Core.ViewModels
     public class ProductManagerViewModel
     {
         public Product Product { get; set; }
-        //Why use IEnumerable?
+        //Why use IEnumerable? To get a list form
         public IEnumerable<ProductCategory> ProductCategories { get; set; }
     }
 }
