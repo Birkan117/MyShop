@@ -15,11 +15,12 @@ namespace MyShop.WebUI.Controllers
         IRepository<Product> context;
         IRepository<ProductCategory> productCategories;
         //Constructor bellow.
-        //This bellow is dependency Injection
+        //This bellow is dependency Injection, telling the controller to accept the two interfaces "Product" and "ProductCategory".
         public ProductManagerController(IRepository<Product> productContext, IRepository<ProductCategory> productCategoryContext)
         {
             context = productContext;
             productCategories = productCategoryContext;
+            
             
         }
         // GET: ProductManager

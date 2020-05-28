@@ -13,6 +13,7 @@ namespace MyShop.WebUI.Controllers
     {
         IRepository<ProductCategory> context;
         //Constructor bellow.
+        //Again dependency injection is bellow.
         public ProductCategoryManagerController(IRepository<ProductCategory> context)
         {
             this.context = context;
